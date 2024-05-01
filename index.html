@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="Estilos/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registro</h1>
+      <form class="formulario-registro" action="POST" id="formulario-registro">
+        <fieldset class="info">
+          <legend class="subtitle">Información Personal</legend>
+          <div class="cajitas">
+            <label for="nombreUsuario">Nombres</label>
+            <input onkeyup="validarNombre()" id="nombreUsuario" type="text" class="cajita" name="nombreUsuario" />
+            <span id="nombreInvalido" class="span"></span>
+          </div>
+          <div class="cajitas">
+            <label for="apellidoUsuario">Apellidos</label>
+            <input onkeyup="validarApellido()" id="apellidoUsuario" type="text" class="cajita" name="apellidoUsuario" />
+            <span id="apellidoInvalido" class="span"></span>
+          </div>
+          <div class="cajitas">
+            <label for="fechaUsuario">Fecha de Nacimiento</label>
+            <input onchange="validarFechaNacimiento()" id="fechaUsuario" type="date" class="cajita" name="fechaUsuario" />
+            <span id="fechaInvalida" class="span"></span>
+          </div>
+          <div class="cajitas">
+            <label for="emailUsuario">Correo electrónico</label>
+            <input onkeyup="validarCorreo()" id="emailUsuario" type="email" class="cajita" name="emailUsuario"/>
+            <span id="correoInvalido" class="span"></span>
+          </div>
+        </fieldset>
+        <fieldset class="segurity">
+          <legend class="subtitle">Seguridad</legend>
+            <div class="cajitas">
+              <label for="passwordUsuario">Contraseña</label>
+              <input onkeyup="validarContraseñas()" id="passwordUsuario" type="password" class="cajita" name="passwordUsuario"/>
+              <span id="contraseñasInvalidas" class="span"></span>
+            </div>
+            <div class="cajitas">
+              <label for="passwordConfirmation">Confirma tu contraseña</label>
+              <input onkeyup="validarContraseñas()" id="passwordConfirmation" type="password" class="cajita" name="passwordConfirmation"/>
+            </div>          
+        </fieldset>
+        <div>
+          <button id="boton-registro" class="boton">Registrarse</button>
+        </div>
+      </form>
+    </div>
+    <script src="Javascripts/validaciones.js" defer></script>
+  </body>
+  
+</html>
